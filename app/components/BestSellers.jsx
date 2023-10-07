@@ -4,7 +4,8 @@ import { getProducts } from "@/libs";
 
 export default async function BestSellers() {
   const product = await getProducts()
-  console.log(product)
+
+  
   return (
     <section className="mt-16">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-7 items-center ">
