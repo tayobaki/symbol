@@ -3,6 +3,7 @@ import { productData } from "@/constants/data";
 export const getProducts = async () => {
   const res = await fetch("http://localhost:3000/api/products");
 
+
   if (!res.ok) {
     throw new Error("Failed Fetch");
   }
@@ -10,8 +11,8 @@ export const getProducts = async () => {
   return res.json();
 };
 
-
 export const getSingleProduct = (slug) => {
-    const item = productData.find((product) => product.slug === slug);
-    return item
-}
+  const product = productData.find((product) => product.slug === slug);
+
+  return product;
+};
