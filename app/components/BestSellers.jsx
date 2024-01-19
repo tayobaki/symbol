@@ -15,7 +15,7 @@ export default async function BestSellers() {
           </button>
         </div>
 
-        {product.productData.map((product) => (
+        {product?.map((product) => (
           <div key={product.slug} className="">
             <Link
               href={`/product/${product.slug}`}
